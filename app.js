@@ -1,7 +1,7 @@
 console.log("Let's get this party started!");
 
 async function giphyGet(term){
-    const res = await axios.get("http://api.giphy.com/v1/gifs/search", {params: {q:`${term}`,api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym"}});
+    const res = await axios.get("https://api.giphy.com/v1/gifs/search", {params: {q:`${term}`,api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym"}});
     let numResults = res.data.data.length;
     const idx = Math.floor(Math.random() * numResults) //random number within data
     const url = (res.data.data[idx].images.original.url);
